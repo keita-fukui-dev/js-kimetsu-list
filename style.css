@@ -1,0 +1,47 @@
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: sans-serif;
+  color: #222;
+}
+
+fieldset {
+  margin-bottom: 16px;
+}
+
+fieldset label {
+  margin-right: 12px;
+}
+
+#error {
+  color: #c00;
+}
+
+/* キャラクター一覧を3列のグリッドで並べる */
+#character-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+#character-list li {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* 画像の縦横比をそろえ、はみ出した部分は切り取る */
+#character-list img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#character-list p {
+  margin: 4px 0;
+}

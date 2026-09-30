@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鬼滅の刃キャラクター一覧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>鬼滅の刃キャラクター一覧</h1>
+
+  <!-- 表示するキャラクターの種類を選ぶラジオボタン（value は API のファイル名と同じにする） -->
+  <fieldset>
+    <legend>表示するキャラクター</legend>
+    <label><input type="radio" name="category" value="all" checked> 全キャラクター</label>
+    <label><input type="radio" name="category" value="kisatsutai"> 鬼殺隊</label>
+    <label><input type="radio" name="category" value="hashira"> 柱</label>
+    <label><input type="radio" name="category" value="oni"> 鬼</label>
+  </fieldset>
+
+  <!-- 読み込み中の表示（最初は hidden で隠しておく） -->
+  <p id="loading" hidden>読み込み中...</p>
+
+  <!-- エラーメッセージの表示場所 -->
+  <p id="error" hidden></p>
+
+  <!-- キャラクター一覧の表示エリア（中身は main.js で作る） -->
+  <ul id="character-list"></ul>
+
+  <script src="main.js"></script>
+</body>
+</html>
